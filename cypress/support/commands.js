@@ -32,3 +32,10 @@ Cypress.Commands.add('login',(username,password) => {
     cy.get('button[type="submit"]').click()
     cy.contains('Your Feed').should('be.visible').and('have.text','Your Feed')
 })
+
+Cypress.Commands.add('loginBank',(username,password)=>{
+        cy.visit('http://zero.webappsecurity.com/login.html')
+        cy.get('#user_login').type(username)
+        cy.get('#user_password').type(password)
+        cy.contains('Sign in').click()
+})
