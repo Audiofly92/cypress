@@ -23,19 +23,19 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite("visit", (originalFn, url, options) => { ... })
+import '@testing-library/cypress/add-commands';
 
-Cypress.Commands.add('login',(username,password) => {
+Cypress.Commands.add('login', () => {
+	cy.visit('https://demo.realworld.io');
+	cy.contains('Sign in').click();
+	cy.get('input[type="email"]').type('raulbutabetfair@gmail.com');
+	cy.get('input[type="password"]').type('Mahomes03#');
+	cy.get('button[type="submit"]').click();
+});
 
-    cy.visit('https://react-redux.realworld.io/#/login')
-    cy.get('input[type="email"]').type(username)
-    cy.get('input[type="password"]').type(password)
-    cy.get('button[type="submit"]').click()
-    cy.contains('Your Feed').should('be.visible').and('have.text','Your Feed')
-})
-
-Cypress.Commands.add('loginBank',(username,password)=>{
-        cy.visit('http://zero.webappsecurity.com/login.html')
-        cy.get('#user_login').type(username)
-        cy.get('#user_password').type(password)
-        cy.contains('Sign in').click()
-})
+Cypress.Commands.add('loginBank', (username, password) => {
+	cy.visit('http://zero.webappsecurity.com/login.html');
+	cy.get('#user_login').type(username);
+	cy.get('#user_password').type(password);
+	cy.contains('Sign in').click();
+});

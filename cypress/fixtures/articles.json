@@ -1,0 +1,39 @@
+{
+	"articles": [
+		{
+			"title": "Cypress testing 1",
+			"slug": "this-is-the-field-for-the-article-title-j0s690",
+			"body": "This is the field for the Body.",
+			"createdAt": "2020-07-24T08:53:30.735Z",
+			"updatedAt": "2020-07-24T08:53:30.735Z",
+			"tagList": [],
+			"description": "This is the field for the Description.",
+			"author": {
+				"username": "markjoco",
+				"bio": null,
+				"image": "https://static.productionready.io/images/smiley-cyrus.jpg",
+				"following": false
+			},
+			"favorited": false,
+			"favoritesCount": 3
+		},
+		{
+			"title": "Cypress testing 2",
+			"slug": "le-xuan-dai-jy1r7v",
+			"body": "Learn at FPT University",
+			"createdAt": "2020-07-24T08:44:31.945Z",
+			"updatedAt": "2020-07-24T08:44:31.945Z",
+			"tagList": [],
+			"description": "030701",
+			"author": {
+				"username": "Le Xuan Dai",
+				"bio": null,
+				"image": "https://static.productionready.io/images/smiley-cyrus.jpg",
+				"following": false
+			},
+			"favorited": false,
+			"favoritesCount": 1
+		}
+	],
+	"articlesCount": 500
+}
